@@ -1,19 +1,24 @@
-Orbit Simulator! This package is intended to be easy to use by all. It uses ordinary differential equations (ODE's) to predict the orbital paths of any object with specified initial conditions. 
+Orbit Engine Simulator! This package is intended to be easy to use by all. It uses ordinary differential equations (ODE's) to predict the orbital paths of any object with specified initial conditions. 
 
-The GUI (frontend):
-- How to use (e.g. format of initial conditions and other things that must be specified)...
-- Capabilities, in the sense of what the user can do with just the GUI (e.g. can take in many units) ...
-- Examples (e.g. images of output) ...
+Orbit Engine is a tool designed in Python that uses second order differential equation solvers to 
+simulate orbits for systems with multiple bodies. The tool used via a graphical user interface that
+which allows users to input initial conditions for various orbital systems. Users can manually type
+the initial positions (in 𝐴𝑈), velocities (in 𝐴𝑈/𝐷𝑎𝑦), and masses (in 𝑀☉) for their given celestial
+bodies. Alternatively, users can pull initial conditions from a csv file stored on the users’ local
+drive. Once imported into the tool, the user can configure the simulation settings. The user can
+modify the time step, duration, and rtol for the ordinary differential equation solvers; the user can
+also leave this field empty and use the tool’s default simulation settings. Once established, the user
+can run the simulation. The simulation algorithm in this tool is efficient and accurate.
 
-The solver (backend):
-- Equations
-- specific functionalities that you implemented (might have some overlap with GUI 'Capabilities' above, but here talk about the technical )
-- optimizations done and things you considered (e.g. the solver normalizes with the smallest distance between objects, to prevent numerical instability) 
+Once the simulation is finished running, users may plot the results and
+view them on the embedded plot in the graphical user interface. The user may also choose to
+animate the plot to view the orbits. The user can then save the orbit data as a csv file. The tool will
+automatically split the data per day.
 
 Dependencies:
-- What non-default (I'd say anything not default to miniconda) packages must be installed for the package to work
-
-TODOs:
-- Issues you know about or things you want to add, that you haven't gotten to yet
+- numpy
+- matplotlib
+- scipy
+- customtkinter
 
 
